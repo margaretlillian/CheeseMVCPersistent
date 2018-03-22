@@ -1,22 +1,25 @@
 ﻿@model List<CheeseMVC.Models.Cheese>
 
-<h1>@ViewBag.Title</h1>
+<h2>Cheese</h2>
+<p>Welcome to the cheesiest website in the universe!</p>
 
 <table class="table">
 
     <tr>
         <th>Name</th>
-        <th>Description</th>
-        <td>Category</td>
+        <th>Category</th>
+        <th class="descr">Description</th>
+
     </tr>
 
     @foreach (var cheese in Model)
     {
-        <tr>
-            <td>@cheese.Name</td>
-            <td>@cheese.Description</td>
-            <td>@cheese.CheeseCategory.Name</td>
-        </tr>
+    <tr>
+        <td>@cheese.Name</td>
+        <td>@cheese.CheeseCategory.Name</td>
+        <td>@cheese.Description</td>
+
+    </tr>
     }
 </table>
 

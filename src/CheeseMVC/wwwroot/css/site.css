@@ -1,38 +1,87 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿
+body {
+    background: url('../images/cheese.jpeg') no-repeat fixed;
+    background-size: cover;
+    font: 1.75em "bookman old style", serif;
+    color: rgb(0, 0, 0);
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+a {
+    color: rgb(158, 106, 31);
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* Set widths on the form inputs since otherwise they're 100% wide */
-input,
-select,
-textarea {
-    max-width: 280px;
+h1 a {
+    color: #fff;
+    position: fixed;
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
+h2 {
+    font-size: 2em;
+    color: rgb(89, 57, 11);
+    border-bottom: 1px solid rgb(204, 123, 8);
 }
 
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"]
-{
+li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+}
+
+table {
     width: 100%;
+    border-collapse: collapse;
 }
 
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-  /* Hide captions */
-  .carousel-caption {
-    display: none
-  }
+th {
+    text-align: left;
+    padding-bottom: 30px;
+    color: rgb(68, 47, 15);
+}
+
+tr {
+    border-bottom: 1px dotted rgb(198, 124, 17);
+}
+
+td {
+    padding: 10px 2px;
+}
+
+.descr {
+    width: 50%;
+}
+
+input, textarea, select {
+    background: rgba(244, 149, 66, 0.4);
+    font: 1em "bookman old style", serif;
+    border-radius: 15px;
+    border: none;
+    color:rgb(96, 68, 44) ;
+    padding: 3px 10px;
+}
+
+#nav {
+    float: left;
+    width: 26%;
+    margin: 2px;
+    padding: 5px;
+    position: fixed;
+    margin-top: 4em;
+}
+
+#content {
+    float: right;
+    width: 70%;
+    padding: 15px;
+}
+
+.form-group {padding-bottom: 30px;}
+
+footer {
+    clear:both; 
 }

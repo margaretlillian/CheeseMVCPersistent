@@ -1,14 +1,23 @@
 ﻿@model CheeseMVC.ViewModels.AddMenuItemViewModel
 
-<h1>Add Item to Menu: @Model.Menu.Name</h1>
+<h2>Add Item to Menu: @Model.Menu.Name</h2>
 
-<form asp-controller="Menu" asp-action="AddItem" method="post">
-    <div class="form-group">
-        <label asp-for="CheeseID"></label>
-        <select asp-for="CheeseID" asp-items="Model.Cheeses"></select>
-        <span asp-validation-for="CheeseID"></span>
-    </div>
 
-    <input type="hidden" name="MenuID" value="@Model.Menu.ID" />
-    <input type="submit" value="Add Item to Menu" />
-</form>
+@if (Model.Cheeses.Count == 0)
+{
+    <p>Please <a asp-controller="Cheese" asp-action="Add">add a cheese</a> first.</p>
+}
+
+@if (Model.Cheeses.Count > 0)
+{
+
+    <form asp-controller="Menu" asp-action="AddItem" method="post">
+        <div class="form-group">
+            <label asp-for="CheeseID"></label>
+            <select asp-for="CheeseID" asp-items="Model.Cheeses"></select>
+            <span asp-validation-for="CheeseID"></span>
+        </div>
+
+        <input type="hidden" name="MenuID" value="@Model.Menu.ID" />
+        <input type="submit" value="Add Item to Menu" />
+    </form>     }
